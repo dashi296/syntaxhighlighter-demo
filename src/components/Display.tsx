@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 type highlighterType = 'hljs' | 'prism';
-const defaultLanguage = 'ruby';
+const DEFAULT_LANGUAGE = 'ruby';
 
 const Display: FC = () => {
   const classes = useStyles();
@@ -78,7 +78,7 @@ end`);
     styles = newHighlighter === 'hljs' ? hljsStyles : prismStyles;
     const newLanguage = languages.includes(selectedLanguage)
       ? selectedLanguage
-      : defaultLanguage;
+      : DEFAULT_LANGUAGE;
     setHighlighter(newHighlighter);
     setLanguage(newLanguage);
   };
@@ -86,7 +86,7 @@ end`);
   return (
     <div className={classes.root}>
       <Grid container spacing={2}>
-        <Grid item xs={2}>
+        <Grid item xs={12} sm={4}>
           <FormControl component="fieldset" className={classes.formControl}>
             <FormLabel component="legend">Highlighter</FormLabel>
             <RadioGroup
@@ -105,7 +105,7 @@ end`);
           </FormControl>
         </Grid>
 
-        <Grid item xs={2}>
+        <Grid item xs={12} sm={4}>
           <FormControl className={classes.formControl}>
             <InputLabel id="language-select-label">Language</InputLabel>
             <Select
@@ -122,7 +122,7 @@ end`);
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={8} />
+        <Grid item xs={7} />
 
         <Grid item xs={12} sm={6}>
           <div>
