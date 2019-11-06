@@ -27,9 +27,9 @@ const useStyles = makeStyles((theme: Theme) =>
       flexWrap: 'wrap',
     },
     textField: {
-      width: '80%',
-      marginLeft: theme.spacing(1),
-      marginRight: theme.spacing(1),
+      width: '95%',
+      margin: theme.spacing(1),
+      // marginRight: theme.spacing(1),
     },
     dense: {
       marginTop: theme.spacing(2),
@@ -85,8 +85,8 @@ end`);
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={4}>
+      <Grid container spacing={2} justify="flex-start">
+        <Grid item xs={12} sm={3}>
           <FormControl component="fieldset" className={classes.formControl}>
             <FormLabel component="legend">Highlighter</FormLabel>
             <RadioGroup
@@ -105,7 +105,7 @@ end`);
           </FormControl>
         </Grid>
 
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={3}>
           <FormControl className={classes.formControl}>
             <InputLabel id="language-select-label">Language</InputLabel>
             <Select
@@ -122,9 +122,8 @@ end`);
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={7} />
 
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12}>
           <div>
             <TextField
               id="codeInput"
@@ -143,7 +142,7 @@ end`);
 
       <div className={classes.separater} />
 
-      <Grid container spacing={2} justify="flex-start">
+      <Grid container justify="flex-start">
         {Object.keys(styles).map(styleName => (
           <Grid item key={styleName} xs={12} sm={6} md={6} lg={4}>
             <HighlightedItem
