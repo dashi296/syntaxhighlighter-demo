@@ -1,0 +1,53 @@
+import {
+  coy,
+  dark,
+  funky,
+  okaidia,
+  solarizedlight,
+  tomorrow,
+  twilight,
+  prism,
+  atomDark,
+  base16AteliersulphurpoolLight,
+  cb,
+  darcula,
+  duotoneDark,
+  duotoneEarth,
+  duotoneForest,
+  duotoneLight,
+  duotoneSea,
+  duotoneSpace,
+  ghcolors,
+  hopscotch,
+  pojoaque,
+  vs,
+  xonokai
+} from 'react-syntax-highlighter/dist/esm/styles/prism';
+
+const styles :{[name: string]: any} = {
+  coy,
+  dark,
+  funky,
+  okaidia,
+  solarizedlight,
+  tomorrow,
+  twilight,
+  prism,
+  atomDark,
+  base16AteliersulphurpoolLight,
+  cb,
+  darcula,
+  duotoneDark,
+  duotoneEarth,
+  duotoneForest,
+  duotoneLight,
+  duotoneSea,
+  duotoneSpace,
+  ghcolors,
+  hopscotch,
+  pojoaque,
+  vs,
+  xonokai
+};
+
+export default styles;
